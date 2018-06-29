@@ -6,6 +6,7 @@ from singer import utils
 
 class IDS(object):
     ORDERS = 'orders'
+    CUSTOMERS = 'customers'
 
 
 stream_ids = [getattr(IDS, x) for x in dir(IDS)
@@ -13,6 +14,7 @@ stream_ids = [getattr(IDS, x) for x in dir(IDS)
 
 PK_FIELDS = {
     IDS.ORDERS: ['id'],
+    IDS.CUSTOMERS: ['id'],
 }
 
 

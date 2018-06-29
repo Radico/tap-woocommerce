@@ -19,6 +19,7 @@ def write_records(tap_stream_id, records):
 
 class BOOK(object):
     ORDERS = [IDS.ORDERS]
+    CUSTOMERS = [IDS.CUSTOMERS]
 
     @classmethod
     def return_bookmark_path(cls, stream):

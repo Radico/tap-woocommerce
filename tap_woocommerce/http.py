@@ -24,8 +24,6 @@ class Client(object):
         options = {
             'page': int((offset - 1) / 100 + 1),
             'per_page': 100,
-            'orderby': 'date',
-            'order': 'desc',
         }
 
         # get stream and order by date desc, offset = offset
