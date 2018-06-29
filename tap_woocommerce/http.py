@@ -48,7 +48,8 @@ class Client(object):
             consumer_key=self.consumer_key,
             consumer_secret=self.consumer_secret,
             wp_api=True,
-            version=self.version
+            version=self.version,
+            timeout=100
         )
 
     @staticmethod

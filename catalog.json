@@ -81,6 +81,47 @@
       },
       "metadata": [],
       "key_properties": []
+    },
+    {
+      "stream": "products",
+      "tap_stream_id": "orders",
+      "schema": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "selected": true,
+        "additionalProperties": false,
+        "properties": {
+          "string_field": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "datetime_field": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time"
+          },
+          "integer_field": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "double_field": {
+            "type": [
+              "null",
+              "number"
+            ]
+          }
+        }
+      },
+      "metadata": [],
+      "key_properties": []
     }
   ]
 }
