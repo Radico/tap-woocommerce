@@ -52,7 +52,7 @@ def main():
         discover(ctx).dump()
         print()
     else:
-        ctx.catalog = args.catalog
+        ctx.catalog = args.properties
         sync(ctx)
 
 
