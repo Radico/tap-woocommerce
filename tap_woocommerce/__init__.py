@@ -52,6 +52,8 @@ def main():
         discover(ctx).dump()
         print()
     else:
+        import ipdb
+        ipdb.set_trace()
         ctx.catalog = args.catalog
         sync(ctx)
 
