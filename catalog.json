@@ -84,7 +84,7 @@
     },
     {
       "stream": "products",
-      "tap_stream_id": "orders",
+      "tap_stream_id": "products",
       "schema": {
         "type": [
           "null",
