@@ -52,7 +52,8 @@ def main():
         discover(ctx).dump()
         print()
     else:
-        ctx.catalog = args.properties
+        ctx.catalog = Catalog.from_dict(args.properties) \
+            if args.properties else discover(ctx)
         sync(ctx)
 
 

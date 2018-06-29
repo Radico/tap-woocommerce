@@ -22,20 +22,19 @@ class Context(object):
         self.state = state
         self.client = Client(config)
         self._catalog = None
-        self._properties = None
         self.campaigns = []
         self.selected_stream_ids = None
         self.now = datetime.utcnow()
 
     @property
-    def properties(self):
-        return self._properties
+    def catalog(self):
+        return self._catalog
 
-    @properties.setter
-    def properties(self, properties):
-        self._properties = properties
+    @catalog.setter
+    def catalog(self, catalog):
+        self._catalog = catalog
         self.selected_stream_ids = set(
-            [s.tap_stream_id for s in properties.streams
+            [s.tap_stream_id for s in catalog.streams
              if s.is_selected()]
         )
 
