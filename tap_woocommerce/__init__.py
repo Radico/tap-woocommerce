@@ -52,7 +52,6 @@ def main():
         discover(ctx).dump()
         print()
     else:
-        LOGGER.info(args)
         ctx.catalog = args.catalog
         sync(ctx)
 
