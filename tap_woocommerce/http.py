@@ -22,8 +22,8 @@ class Client(object):
 
     def get(self, stream, offset):
         options = {
-            'page': int((offset - 1) / 1000 + 1),
-            'per_page': 1000,
+            'page': int((offset - 1) / 100 + 1),
+            'per_page': 100,
             'orderby': 'date',
             'order': 'desc',
         }
