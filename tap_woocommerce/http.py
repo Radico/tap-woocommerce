@@ -22,8 +22,8 @@ class Client(object):
 
     def get(self, stream, offset):
         options = {
-            'page': int((offset - 1) / 1000 + 1),
-            'per_page': 1000,
+            'page': int((offset - 1) / 100 + 1),
+            'per_page': 100,
             'orderby': 'date',
             'order': 'desc',
         }
@@ -31,6 +31,7 @@ class Client(object):
         # get stream and order by date desc, offset = offset
         endpoint = self._build_request_string(stream, options)
         response = self.woocommerce_client.get(endpoint)
+        import ipdb; ipdb.set_trace()
 
         response_json = response.json()
         total_records = len(response_json)
