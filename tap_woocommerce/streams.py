@@ -68,7 +68,7 @@ def call_stream_full(context, stream):
     most_recent_record_date = None
     total_records = None
 
-    while total_records != 0:
+    while total_records is None or total_records >= 100:
         response = context.client.get(stream, offset)
 
         logger.info('{ts} - querying {stream} for {total}'
@@ -79,7 +79,6 @@ def call_stream_full(context, stream):
                     ))
         total_records = response['total_records']
 
-        # do some ordering to get the most recent record date
         data = response['content']
         write_records(stream, data)
 

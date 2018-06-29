@@ -16,7 +16,7 @@ stream_ids = [getattr(IDS, x) for x in dir(IDS)
 PK_FIELDS = {
     IDS.ORDERS: ['id'],
     IDS.CUSTOMERS: ['id'],
-    IDS.PRODUCTS: ['id']
+    IDS.PRODUCTS: ['id'],
 }
 
 
