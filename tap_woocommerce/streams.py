@@ -82,7 +82,7 @@ def call_stream_full(context, stream):
         write_records(stream, data)
 
         # batch size of 100 via woocommerce API
-        offset = offset + 100
+        offset = offset + 1000
 
     return most_recent_record_date
 
@@ -119,7 +119,7 @@ def call_stream_incremental(context, stream):
         write_records(stream, data)
 
         # batch size of 100 via woocommerce API
-        offset = offset + 100
+        offset = offset + 1000
 
     return most_recent_record_date
 

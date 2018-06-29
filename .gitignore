@@ -96,7 +96,6 @@ ENV/
 env.sh
 config.json
 .autoenv.zsh
-.idea/workspace.xml
 
 rsa-key
 tags
