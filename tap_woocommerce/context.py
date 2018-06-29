@@ -39,18 +39,6 @@ class Context(object):
              if s.is_selected()]
         )
 
-    @property
-    def catalog(self):
-        return self._catalog
-
-    @catalog.setter
-    def catalog(self, catalog):
-        self._catalog = catalog
-        self.selected_stream_ids = set(
-            [s.tap_stream_id for s in catalog.streams
-             if s.is_selected()]
-        )
-
     def get_bookmark(self, path):
         return bks_.get_bookmark(self.state, *path)
 
