@@ -23,6 +23,7 @@ class Context(object):
         self.client = Client(config)
         self._catalog = None
         self.campaigns = []
+        self.max_date = None
         self.selected_stream_ids = None
         self.now = datetime.utcnow()
 
