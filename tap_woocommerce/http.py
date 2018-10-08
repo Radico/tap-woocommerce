@@ -19,6 +19,7 @@ class Client(object):
         self.version = config.get('version')
         self.woocommerce_client = self._get_client()
         self.now_string = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self.latest_record = None
 
     def get(self, stream, offset):
         options = {
@@ -32,12 +33,13 @@ class Client(object):
 
         response_json = response.json()
         total_records = len(response_json)
-        latest_record = response_json[-1]
+        if total_records:
+            self.latest_record = response_json[-1]
 
         response_dict = {
             'content': response_json,
             'total_records': total_records,
-            'latest_record': latest_record
+            'latest_record': self.latest_record
         }
 
         return response_dict
