@@ -15,8 +15,8 @@ This tap:
 Setup:
 
 - Run `python3 setup.py install` after cloning
-  - This script will also need to be run to compile any changes you make to the
-    code
+  - NOTE: You will need to re-run this script after making any changes to the
+    code in order to compile your changes
 - Create a `config.json` file, using `sample_config.json` as a model
 - Create a `state.json` file
   - This will likely look like the following:
@@ -28,8 +28,7 @@ Setup:
 ```
 
 Running the tap:
-
-- `tap-woocommerce --config=config.json --state=state.json --properties=catalog.json`
+`tap-woocommerce --config=config.json --state=state.json --properties=catalog.json`
 
 ---
 
