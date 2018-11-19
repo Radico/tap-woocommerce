@@ -134,7 +134,10 @@ def _clean_results(context, stream, data):
 
 def convert_date(date):
     # date = date.replace('T', ' ') (do we need this?)
-    return datetime.strptime(date, '%Y-%m-%dT%H:%M:%S')
+    if (date[-1] == 'Z'):
+        return datetime.strptime(date[:-1], '%Y-%m-%dT%H:%M:%S')
+    else:
+        return datetime.strptime(date, '%Y-%m-%dT%H:%M:%S')
 
 
 def format_record_to_state_date(datestring):
