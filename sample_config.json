@@ -1,5 +1,7 @@
 {
-  "username": "my_username",
-  "password": "my_password",
+  "consumer_key": "my_username",
+  "consumer_secret": "my_password",
+  "url": "https://www.root_url_of_website.com",
+  "version": "wc/v2",
   "start_date": "2017-01-01T00:00:00Z"
 }
